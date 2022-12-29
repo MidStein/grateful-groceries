@@ -1,0 +1,35 @@
+.NavBar {
+	--nav-bar-height: 55px;
+	background: linear-gradient(to bottom, #334155, #1d4ed8, #334155);
+	height: var(--nav-bar-height);
+	padding: 0 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.hero-stuff {
+	color: var(--theme);
+	font-size: 44px;
+	font-family: 'Times New Roman';
+	display: flex;
+	gap: 8px;
+}
+.hero-stuff > img {
+	width: calc(var(--nav-bar-height) - 15px);
+	height: calc(var(--nav-bar-height) - 10px);
+	margin-top: 3px;
+}
+.nav-links {
+	margin-right: 100px;
+	display: flex;
+	gap: 100px;
+}
+.nav-links *{
+	color: var(--theme);
+	font-size: 20px;
+	font-family: sans-serif;
+	cursor: pointer;
+	list-style: none;
+	text-decoration: none;
+}
