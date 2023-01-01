@@ -1,0 +1,55 @@
+{
+	"categories": [
+		{
+			"category": "Fruits",
+			"items": [
+				{
+					"name": "Apple",
+					"price": "60"
+				},
+				{
+					"name": "Banana",
+					"price": "40"
+				},
+				{
+					"name": "Mango",
+					"price": "70"
+				}
+			]
+		},
+		{
+			"category": "Vegetables",
+			"items": [
+				{
+					"name": "Spinach",
+					"price": "10"
+				},
+				{
+					"name": "Cabbage",
+					"price": "80"
+				},
+				{
+					"name": "Potato",
+					"price": "80"
+				}
+			]
+		},
+		{
+			"category": "Meat",
+			"items": [
+				{
+					"name": "Chicken",
+					"price": "60"
+				},
+				{
+					"name": "Lamb",
+					"price": "90"
+				},
+				{
+					"name": "Goat",
+					"price": "150"
+				}
+			]
+		}
+	]
+}
