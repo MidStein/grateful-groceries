@@ -1,0 +1,50 @@
+.ShopPage {
+	padding: 8px;
+}
+
+.ShopPage .item-card {
+	background-color: #f2e8e5;
+	padding: 8px;
+	margin-bottom: 16px;
+	border-radius: 16px;
+	display: flex;
+	gap: 16px;
+}
+.ShopPage .item-pic {
+	background-color: #fff;
+	width: 150px;
+	height: 150px;
+	padding: 8px;
+	border-radius: 16px;
+}
+.ShopPage .item-name {
+	font-size: 18px;
+	font-weight: 800;
+	margin-bottom: 8px;
+}
+.ShopPage .item-price, 
+.item-quantity {
+	font-size: 18px;
+	margin-bottom: 8px;
+}
+.check-pay {
+	background-color: #d9f99d;
+	padding: 8px;
+	border-radius: 4px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+.check-pay > button {
+	font-size: 20px;
+	background-color: #2563e5;
+	color: #fff;
+	font-weight: 700;
+	padding: 4px 16px;;
+	border: none;
+	border-radius: 8px;
+	width: 100%;
+}
+.check-pay>button:active {
+	background-color: #3582f6;
+}

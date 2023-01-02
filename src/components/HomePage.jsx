@@ -11,7 +11,11 @@ const HomePage = () => {
 		const qtyDict = {};
 		for (let i = 0; i < groceries.categories.length; i += 1) {
 			for (let j = 0; j < groceries.categories[i].items.length; j += 1) {
-				qtyDict[`${groceries.categories[i].items[j].name}`] = { qty: 0, isInCart: false };
+				qtyDict[`${groceries.categories[i].items[j].name}`] = { 
+					...groceries.categories[i].items[j],
+					qty: 0, 
+					isInCart: false, 
+				};
 			}
 		}
 		setItems(qtyDict);
@@ -74,21 +78,19 @@ const HomePage = () => {
 						<div>{category.category}</div>
 					</div>
 					<div className='type-group'>
-					{category.items.map((item) => {
-							return (
-								<div className="item-card" key={item.name}>
-									<img src={rc(`./${item.name.toLowerCase()}.png`)} alt={item.name} className="item-pic" />
-									<div className="item-name">{item.name}</div>
-									<div className="item-price">Rs. {item.price}/-</div>
-									<div className="quantity">
-										<button onClick={() => decrement(item.name)}>-</button>
-										<input type="text" value={items[`${item.name}`]?.qty || 0} onChange={(e) => changeHandler(e, item.name)} />
-										<button onClick={() => increment(item.name)}>+</button>
-									</div>
-									<button onClick={(e) => addToCart(e, item.name)}>Add to <img src={rc('./cart.svg')} alt='cart'/></button>
-								</div>
-							);
-					})}
+					{category.items.map((item) => (
+						<div className="item-card" key={item.name}>
+							<img src={rc(`./${item.name.toLowerCase()}.png`)} alt={item.name} className="item-pic" />
+							<div className="item-name">{item.name}</div>
+							<div className="item-price">Rs. {item.price}/-</div>
+							<div className="quantity">
+								<button onClick={() => decrement(item.name)}>-</button>
+								<input type="text" value={items[`${item.name}`]?.qty || 0} onChange={(e) => changeHandler(e, item.name)} />
+								<button onClick={() => increment(item.name)}>+</button>
+							</div>
+							<button onClick={(e) => addToCart(e, item.name)}>Add to <img src={rc('./cart.svg')} alt='cart'/></button>
+						</div>
+					))}
 					</div>
 				</div>
 			))}

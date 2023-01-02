@@ -3,9 +3,9 @@
 	padding: 6px 0 2px 0;
 	position: sticky;
 	top: 0;
-	right: 0;
 	display: flex;
 	justify-content: center;
+	z-index: 1;
 }
 .cart-button {
 	background-color: #bfdbfe;
@@ -31,7 +31,7 @@
 	justify-content: space-around;
 	padding: 16px;
 }
-.item-card {
+.HomePage .item-card {
 	background-color: #f2e8e5;
 	height: auto;
 	border: 2px solid #000;
@@ -42,16 +42,16 @@
 	gap: 2px;
 	cursor: pointer;
 }
-.item-card:hover {
+.HomePage .item-card:hover {
 	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
-.item-pic {
+.HomePage .item-pic {
 	background-color: #fff;
 	width: 250px;
 	height: 250px;
 	padding: 16px;
 }
-.item-name {
+.HomePage .item-name {
 	font-size: 20px;
 	font-weight: 700;
 }
