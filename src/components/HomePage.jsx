@@ -2,7 +2,37 @@ import '../styles/HomePage.css';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import groceries from '../groceries.json';
-const rc = require.context('../images', false);
+
+import cart from '../images/cart.svg';
+import fruits from '../images/fruits.png';
+import vegetables from '../images/vegetables.png';
+import meat from '../images/meat.png';
+import apple from '../images/apple.png';
+import banana from '../images/banana.png';
+import cabbage from '../images/cabbage.png';
+import chicken from '../images/chicken.png';
+import goat from '../images/goat.png';
+import lamb from '../images/lamb.png';
+import mango from '../images/mango.png';
+import potato from '../images/potato.png';
+import spinach from '../images/spinach.png';
+
+const categoryImages = {
+	fruits,
+	vegetables,
+	meat
+};
+const itemImages = {
+	apple,
+	banana,
+	cabbage,
+	chicken,
+	goat,
+	lamb,
+	mango,
+	potato,
+	spinach
+};
 
 const HomePage = () => {
 	const [items, setItems] = useState({});
@@ -65,22 +95,23 @@ const HomePage = () => {
 			<div 
 				style={{ backgroundColor: countCart() > 0 ? '#4ade80' : '#d9f99d' }} 
 				className="sticky"
+				data-testid="count-cart"
 			>
 				{countCart()}
 				<Link to='/shop' state={{ items: items }}>
-					<img src={rc('./cart.svg')} alt="go to cart" className='cart-button'/>
+					<img src={cart} alt="go to cart" className='cart-button'/>
 				</Link>
 			</div>
 			{groceries.categories.map((category) => (
 				<div key={category.category}>
 					<div className="grocery-type">
-						<img src={rc(`./${category.category.toLowerCase()}.png`)} alt={category.category} />
+						<img src={categoryImages[`${category.category.toLowerCase()}`]} alt={category.category} />
 						<div>{category.category}</div>
 					</div>
 					<div className='type-group'>
 					{category.items.map((item) => (
 						<div className="item-card" key={item.name}>
-							<img src={rc(`./${item.name.toLowerCase()}.png`)} alt={item.name} className="item-pic" />
+							<img src={itemImages[`${item.name.toLowerCase()}`]} alt={item.name} className="item-pic" />
 							<div className="item-name">{item.name}</div>
 							<div className="item-price">Rs. {item.price}/-</div>
 							<div className="quantity">
@@ -88,7 +119,7 @@ const HomePage = () => {
 								<input type="text" value={items[`${item.name}`]?.qty || 0} onChange={(e) => changeHandler(e, item.name)} />
 								<button onClick={() => increment(item.name)}>+</button>
 							</div>
-							<button onClick={(e) => addToCart(e, item.name)}>Add to <img src={rc('./cart.svg')} alt='cart'/></button>
+							<button onClick={(e) => addToCart(e, item.name)}>Add to <img src={cart} alt='cart'/></button>
 						</div>
 					))}
 					</div>
