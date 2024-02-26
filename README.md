@@ -24,3 +24,5 @@ Buy your groceries from here
 for React
 
 ## Screen capture
+
+https://github.com/MidStein/shopping-cart/assets/78083747/e27f89c6-63d6-43ed-ad5d-2fd17d346708
