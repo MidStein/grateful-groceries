@@ -10,7 +10,7 @@ function NavBar() {
         <div>Grateful Groceries</div>
       </div>
       <ul className='nav-links'>
-        <Link to='/home'>
+        <Link to='/'>
           <li>Home</li>
         </Link>
         <Link to='/shop'>
