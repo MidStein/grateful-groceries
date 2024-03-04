@@ -1,11 +1,11 @@
-# Shopping Cart
+# Grateful Groceries
 
 Buy your groceries from here
 
 ## Running locally
 
-1. `git clone --depth=1 https://github.com/MidStein/shopping-cart.git`
-2. `cd shopping-cart`
+1. `git clone --depth=1 https://github.com/MidStein/grateful-groceries.git`
+2. `cd grateful-groceries`
 3. `npm install --production` to install dependencies
 4. `npm start` to run the app. Open
   [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -25,4 +25,4 @@ for React
 
 ## Screen capture
 
-https://github.com/MidStein/shopping-cart/assets/78083747/e27f89c6-63d6-43ed-ad5d-2fd17d346708
+https://github.com/MidStein/grateful-groceries/assets/78083747/e27f89c6-63d6-43ed-ad5d-2fd17d346708

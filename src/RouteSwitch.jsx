@@ -5,7 +5,7 @@ import ShopPage from './components/ShopPage';
 
 const RouteSwitch = () => {
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename="/grateful-groceries">
 			<NavBar />
 			<Routes>
 				<Route path='/' element={<HomePage />} />
